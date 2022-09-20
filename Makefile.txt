@@ -1,0 +1,19 @@
+makeTARGET = native
+
+CONTIKI_PROJECT =  buffer
+all: $(CONTIKI_PROJECT)
+
+//READ_DIR = ./
+//READ_SRC = read.c
+
+BUFFER_DIR = ./
+BUFFER_SRC = buffer.c
+
+WRITE_DIR = ./
+WRITE_SRC =write.c
+
+PROJECTDIRS +=  $(BUFFER_DIR) $(WRITE_DIR)
+PROJECT_SOURCEFILES +=  $(BUFFER_SRC) $(WRITE_SRC)
+
+CONTIKI = ../../contiki-ng
+include $(CONTIKI)/Makefile.include
